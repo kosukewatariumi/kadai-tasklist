@@ -43,8 +43,6 @@ public class Tasks {
         this.id = id;
     }
 
-
-
     public String getContent() {
         return content;
     }
@@ -68,4 +66,6 @@ public class Tasks {
     public void setUpdated_at(Timestamp updated_at) {
         this.updated_at = updated_at;
     }
+
+
 }
