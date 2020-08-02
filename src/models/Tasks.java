@@ -14,9 +14,14 @@ import javax.persistence.Table;
 @Entity
 @NamedQueries({
     @NamedQuery(
-            name = "getAllTasks",
+            name = "getAlltasks",
             query = "SELECT m FROM Tasks AS m ORDER BY m.id DESC"
-            )
+            ),
+
+@NamedQuery(
+        name = "gettasksCount",
+        query = "SELECT COUNT(m) FROM Tasks AS m"
+        )
 })
 @Table(name = "tasks")
 public class Tasks {
@@ -24,7 +29,6 @@ public class Tasks {
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
 
     @Column(name = "content", length = 255, nullable = false)
     private String content;
